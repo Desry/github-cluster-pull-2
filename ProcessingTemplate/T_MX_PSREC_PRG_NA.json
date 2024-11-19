@@ -2,6 +2,7 @@
   "description": "Warehouse Table Purge PSREC_PRG_NA",
   "folder": "MX_EOD",
   "node": "murex_appserver",
+  "owner": "Administrator",
   "priority": "0",
   "processingType": "TASK",
   "serverNodeType": "LINUX",

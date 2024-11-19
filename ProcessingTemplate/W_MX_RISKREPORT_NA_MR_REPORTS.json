@@ -1,6 +1,7 @@
 {
   "description": "RiskReport Sub-workflow for NA",
   "folder": "MX_EOD",
+  "owner": "Administrator",
   "priority": "0",
   "processingType": "WORKFLOW",
   "tags": 

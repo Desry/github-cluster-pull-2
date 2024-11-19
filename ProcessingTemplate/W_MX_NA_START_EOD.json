@@ -1,6 +1,7 @@
 {
   "description": "12000|EOD kickoff",
   "folder": "MX_EOD",
+  "owner": "Administrator",
   "priority": "0",
   "processingType": "WORKFLOW",
   "tags": 

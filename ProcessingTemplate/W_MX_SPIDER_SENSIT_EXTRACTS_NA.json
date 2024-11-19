@@ -1,6 +1,7 @@
 {
   "description": "12000|Spider sensitivity extracts",
   "folder": "MX_EOD",
+  "owner": "Administrator",
   "priority": "0",
   "processingType": "WORKFLOW",
   "tags": 

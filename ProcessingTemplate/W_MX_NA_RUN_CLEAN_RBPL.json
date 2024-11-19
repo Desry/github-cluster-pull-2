@@ -1,6 +1,7 @@
 {
   "description": "12000|RBPL initialisation North America",
   "folder": "MX_EOD",
+  "owner": "Administrator",
   "priority": "0",
   "processingType": "WORKFLOW",
   "tags": 

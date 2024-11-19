@@ -2,6 +2,7 @@
   "description": "Position Server Reconciliation recCheck.sh North America",
   "folder": "MX_EOD",
   "node": "murex_appserver",
+  "owner": "Administrator",
   "priority": "0",
   "processingType": "TASK",
   "serverNodeType": "LINUX",
