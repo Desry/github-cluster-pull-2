@@ -1,0 +1,97 @@
+{
+  "delayedStartTime": "${TimeDate}",
+  "folder": "SYSTEM",
+  "owner": "vasyl.pashko@infinitedata.com",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "tags": 
+  [
+    "WMOS"
+  ],
+  "timeZone": "${TimeZone}",
+  "workflowType": "STANDARD",
+  "customFieldValues": {
+  },
+  "designParameters": 
+  [
+    {
+      "editorType": "KEY_VALUE_STORE",
+      "name": "Semaphore",
+      "optionDataSource": "SemaphoreList.Wmos.dskv",
+      "required": true,
+      "title": "Semaphore"
+    },
+    {
+      "editorType": "LIST",
+      "listOfValues": "{\"ON\":\"ON\",\"OFF\":\"OFF\"}",
+      "name": "Status",
+      "required": true,
+      "title": "Status"
+    },
+    {
+      "editorType": "DATE_TIME",
+      "name": "TimeDate",
+      "title": "TimeDate"
+    },
+    {
+      "editorType": "KEY_VALUE_STORE",
+      "name": "TimeZone",
+      "optionDataSource": "TimeZoneList.Wmos.dskv",
+      "title": "TimeZone"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ENVIRONMENT",
+      "title": "ENVIRONMENT"
+    }
+  ],
+  "items": 
+  [
+    {
+      "folder": "SYSTEM",
+      "name": "SetSemaphoreInOff.Wmos.sem",
+      "processingTemplate": "SetSemaphoreInOff.Wmos.sem",
+      "processingType": "TASK",
+      "serverNodeType": "INTERNAL",
+      "tags": 
+      [
+        "WMOS"
+      ],
+      "taskType": "SET_SEMAPHORE_STATE",
+      "ignoreCondition": {
+        "criteria": 
+        [
+          {
+            "fieldName": "${Status}",
+            "operator": "EQ",
+            "value": "ON"
+          }
+        ],
+        "operator": "AND"
+      }
+    },
+    {
+      "folder": "SYSTEM",
+      "name": "SetSemaphoreInOn.Wmos.sem",
+      "processingTemplate": "SetSemaphoreInOn.Wmos.sem",
+      "processingType": "TASK",
+      "serverNodeType": "INTERNAL",
+      "tags": 
+      [
+        "WMOS"
+      ],
+      "taskType": "SET_SEMAPHORE_STATE",
+      "ignoreCondition": {
+        "criteria": 
+        [
+          {
+            "fieldName": "${Status}",
+            "operator": "EQ",
+            "value": "OFF"
+          }
+        ],
+        "operator": "AND"
+      }
+    }
+  ]
+}
